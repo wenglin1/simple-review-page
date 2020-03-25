@@ -1,0 +1,36 @@
+#restaurant{
+  margin: 2rem;
+  width: auto;
+}
+
+.restaurantImg {
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+}
+
+.card {
+  text-align: center;
+  border: black solid 1px;
+  padding: 1rem;
+  width: 18rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+}
+
+button {
+  position: relative;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+}
+
+.card_title{
+  color: green;
+}
