@@ -11,13 +11,13 @@ mike = User.create(name: "mike", username: "mike", password: "123456")
     name: Faker::Restaurant.name, 
     location: Faker::Address.state,
     cuisine: Faker::Restaurant.type, 
-    rating: (6..10).to_a.sample,
     img_url: Faker::Placeholdit.image(size: '50x50', format: 'jpeg', background_color: :random)
 })
 end
 
 50.times do
     Review.create({
+    rating: (2..10).to_a.sample,
     description: Faker::Restaurant.review,
     user_id: User.all.sample.id,
     restaurant_id: Restaurant.all.sample.id

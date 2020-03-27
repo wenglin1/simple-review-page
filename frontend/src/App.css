@@ -17,11 +17,13 @@
   height: 25rem;
   display: inline-grid;
   margin: 1rem 2rem;
+  font-weight: bold;
+  background-color: lightgreen;
 }
 
 button {
   position: relative;
-  background-color: red;
+  background-color: lightblue;
   border: none;
   border-radius: 5px;
   height: 3rem;
@@ -29,8 +31,39 @@ button {
   color: whitesmoke;
   font-size: 18px;
   justify-self: center;
+  font-weight: bold;
 }
 
 .card_title{
-  color: green;
+  color: darkblue;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #333;
+}
+
+ul.nav li {
+  float: left;
+}
+
+ul.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover {
+  background-color: #111;
+}
+
+.notFound,.Home,#profile-card {
+  text-align: center;
 }

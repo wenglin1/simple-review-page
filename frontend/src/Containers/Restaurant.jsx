@@ -1,23 +1,29 @@
-import React, { component, Component } from 'react'
-import Review from './Review'
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
 class Restaurant extends Component {
 
     state = {
-        clicked: false
+        reviews: []
     }
 
-    changeState = (e) => {
-        this.setState({
-            clicked: !this.state.clicked
-        })    
+    componentDidMount = () => {
+        fetch("http://localhost:3000/reviews")
+        .then(r => r.json())
+        .then(newArray => {
+            this.setState({
+                reviews: newArray
+            })
+        })
     }
-  
 
+    handleClick = (e) => {
+        this.props.history.push(`/restaurants/${this.props.restaurant.id}`)
+    }
     
     render() {
 
-        let {name, location, cuisine, rating, img_url} = this.props.restaurant
+        let {name, location, cuisine} = this.props.restaurant
 
         return (
             <div className="card">
@@ -26,7 +32,6 @@ class Restaurant extends Component {
                     <h3 className="card_title">{name}</h3>
                     <div className="card_detail">
                         <p>Location: {location}</p>
-                        <p>Rating: {rating}</p>
                         <p>Cuisine: {cuisine}</p>
                     </div>
                     <button onClick={this.handleClick}>Reviews</button>
@@ -36,4 +41,4 @@ class Restaurant extends Component {
   }
 }
 
-export default Restaurant
+export default withRouter(Restaurant)

@@ -3,8 +3,8 @@ import Restaurant from "./Restaurant"
 
 const RestaurantsContainer = (props) => {
   
-  let arrayOfComponents = props.restaurants.map((restaurantOBJ) => {
-    return <Restaurant key={restaurantOBJ.id} restaurant={restaurantOBJ}/>
+  let arrayOfComponents = props.restaurants.map((restaurant) => {
+    return <Restaurant key={restaurant.id} restaurant={restaurant}/>
   })
   
   return (

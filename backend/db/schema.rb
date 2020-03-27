@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2020_03_25_071236) do
     t.string "name"
     t.string "location"
     t.string "cuisine"
-    t.string "rating"
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_071236) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "description"
+    t.integer "rating"
     t.bigint "user_id", null: false
     t.bigint "restaurant_id", null: false
     t.datetime "created_at", precision: 6, null: false
