@@ -7,7 +7,7 @@ class ProfileContainer extends Component {
   render() {
     
     let {username, reviews} = this.props.user
-  
+
     let arrayOfReviews = reviews.map((review) => {
         return <ProfileReview key={review.id} review={review} handleDelete={this.props.handleDelete}/>
     })

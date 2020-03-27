@@ -14,7 +14,7 @@ const ReviewsContainer = (props) => {
     <div id="review">
         <h1>{props.foundRestaurant.name}</h1>
         <div>{ arrayOfReviews }</div>
-        <NewReview token={props.token} addReview={props.addReview}/>
+        <NewReview token={props.token} addReview={props.addReview} restaurant={props.foundRestaurant}/>
     </div>
     
   ) 

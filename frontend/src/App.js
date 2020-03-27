@@ -99,11 +99,21 @@ class App extends Component {
   }
 
   addReview = (reviewObj) => {
+    let stateRestaurants = [...this.state.restaurants]
+    let filteredArray = stateRestaurants.map(restaurant => {
+      if (restaurant.id === reviewObj.restaurant_id) {
+        restaurant.reviews = [...restaurant.reviews, reviewObj]
+        return restaurant
+      } else {
+        return restaurant 
+      }
+    }) 
     this.setState({
       user: {
         ...this.state.user,
-        snacks: [...this.state.user.reviews, reviewObj]
-      }
+        reviews: [...this.state.user.reviews, reviewObj]
+      },
+      restaurants: filteredArray
     })
   }
 

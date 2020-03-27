@@ -5,7 +5,6 @@ class Review extends Component {
     render () {
 
         let {rating, description} = this.props.review
-        console.log(this.props.review.user)
         return (
             <div className="review-card">
                 <div className="card_content">

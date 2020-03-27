@@ -9,7 +9,7 @@ class ProfileReview extends Component {
     render () {
 
         let {rating, description, restaurant} = this.props.review
-        console.log(this.props.review.user)
+        console.log(this.props.review.restaurant_id)
         return (
             <div className="review-card">
                 <div className="card_content">

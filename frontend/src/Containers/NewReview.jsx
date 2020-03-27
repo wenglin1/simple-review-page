@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Review from './Review';
 
 class NewReview extends Component {
+
   state = {
     description: "",
     rating: "",
@@ -9,7 +10,7 @@ class NewReview extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-      console.log(this.props.token, "hi")
+      console.log(this.props.restaurant)
       fetch("http://localhost:3000/reviews", {
         method: "POST",
         headers: {
@@ -18,7 +19,8 @@ class NewReview extends Component {
         },
         body: JSON.stringify({
           rating: this.state.rating,
-          description: this.state.description
+          description: this.state.description,
+          restaurant_id: this.props.restaurant.id
         })
       })
       .then(r => r.json())
