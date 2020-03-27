@@ -47,7 +47,7 @@ class NewReview extends Component {
         <h1>New Review</h1>
         <label htmlFor="rating">Rating:</label>
         <input type="integer" autoComplete="off" name="rating" value={rating} onChange={this.handleChange}/>
-        <label htmlFor="description">description:</label>
+        <label htmlFor="description">Description:</label>
         <input type="text" autoComplete="off" name="description" value={description} onChange={this.handleChange}/>
         <input type="submit" value="Submit"/>
       </form>

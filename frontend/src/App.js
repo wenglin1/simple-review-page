@@ -91,8 +91,10 @@ class App extends Component {
         return review.id !== id
       })
       this.setState({
-        reviews: filteredArray
-      })
+        reviews: filteredArray,
+      },
+      this.props.history.push("/profile"))
+      
     })
   }
 

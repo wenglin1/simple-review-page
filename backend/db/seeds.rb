@@ -6,7 +6,7 @@ admin = User.create(name: "weng", username: "weng", password: "123456")
 bob = User.create(name: "bob", username: "bob", password: "123456")
 mike = User.create(name: "mike", username: "mike", password: "123456")
 
-10.times do
+4.times do
     Restaurant.create({
     name: Faker::Restaurant.name, 
     location: Faker::Address.state,
@@ -15,7 +15,7 @@ mike = User.create(name: "mike", username: "mike", password: "123456")
 })
 end
 
-50.times do
+10.times do
     Review.create({
     rating: (2..10).to_a.sample,
     description: Faker::Restaurant.review,

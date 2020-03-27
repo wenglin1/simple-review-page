@@ -64,6 +64,6 @@ ul.nav li a:hover {
   background-color: #111;
 }
 
-.notFound,.Home,#profile-card {
+.notFound,.Home,#profile-card,#review {
   text-align: center;
 }
